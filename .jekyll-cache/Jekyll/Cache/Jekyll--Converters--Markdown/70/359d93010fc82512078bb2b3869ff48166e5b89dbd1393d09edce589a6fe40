@@ -1,0 +1,85 @@
+I"T<h2 id="contributing">Contributing</h2>
+
+<h3 id="reporting-issues">Reporting Issues</h3>
+
+<p>Reporting issues is a great way to help a project. However for it be helpful, you need to provide
+enough information to make it <em>reproducible</em>. Before reporting, <a href="#windows_and_internationalization">check below</a>
+to see if your platform/issue is supported. I expect to see the following in an issue report:</p>
+
+<ul>
+  <li>A reproducible set of steps that led you to the bug.</li>
+  <li>If there is an exception, its full backtrace. Make sure to wrap output in <a href="https://help.github.com/articles/github-flavored-markdown#syntax-highlighting">triple
+backticks</a></li>
+  <li>Language version</li>
+  <li>Version of gem/clojar/library you are using e.g. <code class="language-plaintext highlighter-rouge">hirb 0.7.1</code></li>
+  <li>Your OS version e.g. <code class="language-plaintext highlighter-rouge">OSX 10.7</code></li>
+</ul>
+
+<p>Those who provide the above <em>get priority</em> over those who don’t.</p>
+
+<p>Additional data points I expect in a report by language:</p>
+
+<ul>
+  <li>Ruby: Run <code class="language-plaintext highlighter-rouge">gem env</code> for Rubygems version, OS platform and ruby version manager</li>
+  <li>Clojure: Run <code class="language-plaintext highlighter-rouge">lein -v</code> for Leiningen and Java version</li>
+  <li>JS/HTML/CSS: Browser version</li>
+</ul>
+
+<h3 id="contributing-code">Contributing Code</h3>
+
+<p>To make your helpful changes:</p>
+
+<ol>
+  <li><a href="http://help.github.com/fork-a-repo/">Fork the project</a></li>
+  <li>Create a topic branch - <code class="language-plaintext highlighter-rouge">git checkout -b my_branch</code></li>
+  <li><em>Insert awesome code</em></li>
+  <li>Push your branch - <code class="language-plaintext highlighter-rouge">git push origin my_branch</code></li>
+  <li><a href="http://help.github.com/send-pull-requests/">Make a pull request</a></li>
+</ol>
+
+<p>Make sure to:</p>
+
+<ul>
+  <li>add tests and documentation.</li>
+  <li>follow the coding style of the project. When in doubt, see <a href="https://github.com/chneukirchen/styleguide/blob/master/RUBY-STYLE">this
+guide for ruby</a> and
+<a href="https://github.com/bbatsov/clojure-style-guide">this guide for clojure</a>.</li>
+  <li>not modify or add to the development setup i.e. .gitignore
+    <ul>
+      <li>for ruby: Gemfile, Rakefile, or *.gemspec.</li>
+      <li>for clojure: project.clj</li>
+    </ul>
+  </li>
+  <li>not add support for older versions of a language unless the library
+mentions that it does. For clojure libraries, I’m supporting 1.4 and 1.5.
+For ruby libraries, I’m supporting 1.9.3 and 2.0</li>
+</ul>
+
+<p>For tests on a project:</p>
+
+<ul>
+  <li>
+    <p>See the current testing status of a project: http://travis-ci.org/cldwalker/PROJECT i.e.
+<a href="http://travis-ci.org/cldwalker/hirb">hirb</a></p>
+  </li>
+  <li>For ruby projects:
+    <ul>
+      <li>Try running them without bundler first: <code class="language-plaintext highlighter-rouge">gem install GEM_NAME --development &amp;&amp; rake</code></li>
+      <li>If that doesn’t work, try bundler. If there’s no Gemfile: <code class="language-plaintext highlighter-rouge">bundle init --gemspec=.gemspec</code>. Then
+<code class="language-plaintext highlighter-rouge">bundle install &amp;&amp; bundle exec rake</code></li>
+      <li>After changes, make sure tests pass on all supported ruby versions. See the rvm key of travis.yml.</li>
+    </ul>
+  </li>
+  <li>For clojure projects:
+    <ul>
+      <li>Run tests with <code class="language-plaintext highlighter-rouge">lein test</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="windows-and-internationalization">Windows and Internationalization</h3>
+
+<p>I am open contributions that add support for Windows or internationalization. However, I don’t need
+either and thus will not actively support them other than to take contributions.</p>
+
+:ET
